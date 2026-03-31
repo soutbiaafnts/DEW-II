@@ -1,58 +1,59 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Validação de Formulários</title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Validação de Formulários</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
+  <body>
+    <h1>Exercício de Validação de Formulários</h1>
 
-<body>
+    <form id="f" method="post" action="#">
+      <label for="nome"> Nome: </label><br />
+      <input type="text" id="nome" name="nome" size="40" maxlength="40" />
+      <span id="erro_nome" class="erro"></span><br /><br />
 
-	<h1>Exercício de Validação de Formulários</h1>
+      <label for="">Tipo de Pessoa:</label><br />
+      <input type="radio" id="pfisica" name="tipo" value="fisica" />
+      <label for="pfisica"> Física </label>
 
-	<form id="f" method="post" action="https://postman-echo.com/post">
-        
-        <label for="nome"> Nome: </label><br>
-        <input type="text" id="nome" name="nome" size="40" maxlength="40" /><br><br>
-		
-		
-		
-		<label for="">Tipo de Pessoa:</label><br>
-		<input type="radio" id="pfisica" name="tipo" value="fisica" />
-		<label for="pfisica"> Fisica </label>
-		
-		<input type="radio" id="pjuridica" name="tipo" value="juridica"/>
-		<label for="pjuridica"> Jurídica </label><br><br>
-		
-		<label for="cpf_cnpj"> CPF/CNPJ: </label><br>
-		<input type="text" id="cpf_cnpj" name="cpf_cnpj" /><br><br>
-		
-		
-        <input type="submit" id="enviar" value="Enviar" />
-        <input type="reset" id="limpar" value="Limpar" />
-        
-        
+      <input type="radio" id="pjuridica" name="tipo" value="juridica" />
+      <label for="pjuridica"> Jurídica </label>
+      <span id="erro_tipo" class="erro"></span><br /><br />
+
+      <label for="cpf_cnpj"> CPF/CNPJ: </label><br />
+      <input type="text" id="cpf_cnpj" name="cpf_cnpj" />
+      <span id="erro_cpf_cnpj" class="erro"></span><br /><br />
+
+      <input type="submit" id="enviar" value="Enviar" />
+      <input type="reset" id="limpar" value="Limpar" />
     </form>
-    
-    <br/>
-	
-    <hr/>
-    
-    <h2> Regras para validação </h2>
 
-	<p>Caso alguma das regras abaixo não seja satisfeita, deverá ser exibida uma mensagem para o usuário e dado foco ao campo que seja inválido.</p>
-    
+    <br />
+
+    <hr />
+
+    <h2>Regras para validação</h2>
+
+    <p>
+      Caso alguma das regras abaixo não seja satisfeita, deverá ser exibida uma
+      mensagem para o usuário e dado foco ao campo que seja inválido.
+    </p>
+
     <ul>
-    	<li> O nome não pode estar vazio. </li>
-		<li> O tipo de pessoa deve ser selecionado. </li>
-		<li> Pessoas físicas possuem CPF, enquanto pessoas jurídicas possuem CNPJ. </li>
-        
-		<li>
-			O CPF deve ser validado usando a seguinte função:
-			<table border="0" bgcolor="Tan" width="70%">
-			<tr>
-			<td>
-			<pre>
+      <li>O nome não pode estar vazio.</li>
+      <li>O tipo de pessoa deve ser selecionado.</li>
+      <li>
+        Pessoas físicas possuem CPF, enquanto pessoas jurídicas possuem CNPJ.
+      </li>
+
+      <li>
+        O CPF deve ser validado usando a seguinte função:
+        <table border="0" bgcolor="Tan" width="70%">
+          <tr>
+            <td>
+              <pre>
 function valida_cpf(cpf)
 {
 	var numeros, digitos, soma, i, resultado, digitos_iguais;
@@ -89,18 +90,19 @@ function valida_cpf(cpf)
 	else
 		return false;
 }
-			</pre>
-			</td>
-			</tr>
-			</table>
-		</li>
-		
-	<li>
-		O CNPJ deve ser validado usando a seguinte função:
-		<table border="0" bgcolor="Tan" width="70%">
-		<tr>
-		<td>
-		<pre>
+			</pre
+              >
+            </td>
+          </tr>
+        </table>
+      </li>
+
+      <li>
+        O CNPJ deve ser validado usando a seguinte função:
+        <table border="0" bgcolor="Tan" width="70%">
+          <tr>
+            <td>
+              <pre>
 function valida_cnpj(cnpj)
 {
 	var numeros, digitos, soma, i, resultado, pos, tamanho, digitos_iguais;
@@ -147,18 +149,14 @@ function valida_cnpj(cnpj)
 	else
 		return false;
 } 	
-		</pre>
-		</td>
-		</tr>
-		</table>
-	</li>
-		
+		</pre
+              >
+            </td>
+          </tr>
+        </table>
+      </li>
     </ul>
-    
-                 
-</body>
-
-
-
-
+  </body>
 </html>
+
+<script src="script.js" defer></script>
