@@ -4,27 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     clearErrors();
 
-    let valid = true;
-
     if (!verifyName()) {
-      valid = false;
+      event.preventDefault();
+      return;
     }
 
     if (!verifyPersonType()) {
-      valid = false;
+      event.preventDefault();
+      return;
     }
 
     if (!verifyCpfCnpj()) {
-      valid = false;
-    }
-
-    if (!valid) {
       event.preventDefault();
+      return;
     }
-
-    let pf = document.getElementById("pfisica");
-    let pj = document.getElementById("pjuridica");
-    let cpf_cnpj = document.getElementById("cpf_cnpj");
   });
 
   function clearErrors(params) {
@@ -67,22 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
     if (cpf_cnpj.trim() === "") {
       document.getElementById("erro_cpf_cnpj").textContent =
         "O CPF/CNPJ é obrigatório.";
-      cpf_cnpj.focus();
+      document.getElementById("cpf_cnpj").focus();
       return false;
     }
 
     if (pf.checked) {
       if (!verifyCpf(cpf_cnpj)) {
         document.getElementById("erro_cpf_cnpj").textContent = "CPF inválido.";
-        cpf_cnpj.focus();
+        document.getElementById("cpf_cnpj").focus();
         return false;
       }
     }
 
     if (pj.checked) {
-      if (!verifyCnpj(cpf_cnoj)) {
+      if (!verifyCnpj(cpf_cnpj)) {
         document.getElementById("erro_cpf_cnpj").textContent = "CNPJ inválido.";
-        cpf_cnoj.focus();
+        document.getElementById("cpf_cnpj").focus();
         return false;
       }
     }
@@ -137,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function verifyCnpj(cnpj) { 
+  function verifyCnpj(cnpj) {
     let numbers, digits, sum, i, result, position, size, equalDigits;
     equalDigits = 1;
 
@@ -158,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       digits = cnpj.substring(size);
       sum = 0;
       position = size - 7;
-      
+
       for (i = size; i >= 1; i--) {
         sum += numbers.charAt(size - i) * position--;
         if (position < 2) {
@@ -191,9 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       return true;
-    } else { 
+    } else {
       return false;
     }
-
   }
 });
