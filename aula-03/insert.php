@@ -2,7 +2,7 @@
 
 require_once "connection.php";
 
-$conn = new Connection("localhost", "atividade03", "root", "@rootPc");
+$conn = new Connection("localhost", "atividade03", "root", "@root");
 $pdo = $conn->getConnection();
 
 $errors = [];

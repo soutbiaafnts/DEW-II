@@ -12,7 +12,7 @@
   <!-- Conexão -->
   <?php
   require_once 'connection.php';
-  $conn = new Connection("localhost", "atividade03", "root", "@rootPc");
+  $conn = new Connection("localhost", "atividade03", "root", "root");
   $pdoConn = $conn->getConnection();
   ?>
   <!--  -->
