@@ -1,0 +1,12 @@
+a:3:{s:4:"time";i:1778002412;s:3:"ttl";i:3;s:4:"data";s:347:"<!-- DEBUG-VIEW START 2 APPPATH\Views\quem_somos_content.php -->
+<h1>Quem Somos</h1>
+
+<ul><li>Ana</li><li>Bernardo</li><li>Carlos</li><li>Paula</li></ul><br/><ul>
+  <li>Ana</li>
+  <li>Bernardo</li>
+  <li>Carlos</li>
+  <li>Paula</li>
+</ul>
+<br/>Data e Hora: 05/05/2026 17:33:32
+<!-- DEBUG-VIEW ENDED 2 APPPATH\Views\quem_somos_content.php -->
+";}
