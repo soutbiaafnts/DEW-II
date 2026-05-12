@@ -1,0 +1,174 @@
+CRITICAL - 2026-05-12 16:49:15 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, none returned
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-12 16:55:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', 'roo', 'model_test', 3306, '', 0)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+CRITICAL - 2026-05-12 16:55:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-12 16:55:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', 'roo', 'model_test', 3306, '', 0)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+CRITICAL - 2026-05-12 16:55:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-12 16:57:56 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', 'roo', 'model_test', 3306, '', 0)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+CRITICAL - 2026-05-12 16:57:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-12 17:01:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', 'roo', 'model_test', 3306, '', 0)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(14): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in E:\usuarios\0077064\Documents\DEW-II\008\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 E:\usuarios\0077064\Documents\DEW-II\008\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\usuarios\0077064\Documents\DEW-II\008\app\Controllers\Home.php(14): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#3 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 E:\usuarios\0077064\Documents\DEW-II\008\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#6 E:\usuarios\0077064\Documents\DEW-II\008\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 E:\usuarios\0077064\Documents\DEW-II\008\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+CRITICAL - 2026-05-12 17:16:36 --> ParseError: syntax error, unexpected token "}", expecting variable
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 29.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\usuarios\\0077064\\Documents\\DEW-II\\008\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-12 17:23:05 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 33.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\usuarios\\0077064\\Documents\\DEW-II\\008\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-12 17:23:27 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\usuarios\\0077064\\Documents\\DEW-II\\008\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
