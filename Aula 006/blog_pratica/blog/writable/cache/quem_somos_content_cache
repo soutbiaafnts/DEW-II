@@ -1,0 +1,12 @@
+a:3:{s:4:"time";i:1778034821;s:3:"ttl";i:3;s:4:"data";s:576:"<!-- DEBUG-VIEW START 2 APPPATH\Views\quem_somos_content.php -->
+<h1>Quem Somos</h1>
+
+<ul><li>Ana</li><li>Bernardo</li><li>Carlos</li><li>Paula</li></ul><br/><ul>
+  <li>Ana</li>
+  <li>Bernardo</li>
+  <li>Carlos</li>
+  <li>Paula</li>
+</ul>
+<br/>Data e Hora: 06/05/2026 02:33:41<table border='1' cellpadding='5' cellspacing='0'><tr><th>Aluno</th><th>Nota</th></tr><tr><td>Ana</td><td>10</td></tr><tr><td>Bernardo</td><td>9</td></tr><tr><td>Carlos</td><td>8</td></tr><tr><td>Paula</td><td>7</td></tr></table>
+<!-- DEBUG-VIEW ENDED 2 APPPATH\Views\quem_somos_content.php -->
+";}
