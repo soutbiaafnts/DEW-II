@@ -30,18 +30,15 @@ class Home extends BaseController
         $alunos = $alunoModel->findAll();
 
         // dd($alunos);
-
-        // ponto 7 -> vetor a
+        
         $dados = [
-            'alunos',
-            $alunos
+            'alunos' => $alunos
         ];
 
-        echo "<pre>";
-        var_dump($dados);
-        echo "</pre>";
+        // echo "<pre>";
+        // var_dump($dados);
+        // echo "</pre>";
 
-
-        return '';
+        return view('Aluno', $dados);
     }
 }

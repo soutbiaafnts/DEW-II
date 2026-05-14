@@ -12,7 +12,7 @@ class AlunoModel extends Model
     protected $useAutoIncrement = true;
 
     // podemos usar $returnType = object (mudar para o ponto 8)
-    protected $returnType     = 'array'; 
+    protected $returnType     = 'object'; 
     protected $useSoftDeletes = false;
 
     protected $allowedFields = ['nome_alu', 'nota_alu'];
