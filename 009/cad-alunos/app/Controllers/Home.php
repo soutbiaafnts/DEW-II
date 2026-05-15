@@ -24,7 +24,7 @@ class Home extends BaseController {
 
         // o método save, salva ou atualiza
         if ( $alunoModel->save($aluno)) {
-            return redirect()->to('/')->with('succes', 'Inserido com sucesso.');
+            return redirect()->to('/')->with('success', 'Inserido com sucesso.');
         } else {
             return redirect()->to('/')->with('error', 'Erro ao inserir.');
         }
