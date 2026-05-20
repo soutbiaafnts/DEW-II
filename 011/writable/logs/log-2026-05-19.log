@@ -1,0 +1,48 @@
+CRITICAL - 2026-05-19 17:15:13 --> Error: Class "Config\App\Services\AlunoService" not found
+[Method: GET, Route: /]
+in APPPATH\Config\Services.php on line 28.
+ 1 SYSTEMPATH\Config\BaseService.php(251): Config\Services::alunos(false)
+ 2 APPPATH\Config\Services.php(25): CodeIgniter\Config\BaseService::getSharedInstance('alunos')
+ 3 SYSTEMPATH\Config\BaseService.php(321): Config\Services::alunos()
+ 4 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('alunos', [])
+ 5 SYSTEMPATH\Common.php(1027): CodeIgniter\Config\BaseService::get('alunos')
+ 6 APPPATH\Controllers\Home.php(9): service('alunos')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('E:\\usuarios\\0077064\\Documents\\DEW-II\\011\\public\\index.php')
+CRITICAL - 2026-05-19 17:15:41 --> Error: Class "Config\App\Services\AlunoService" not found
+[Method: GET, Route: /]
+in APPPATH\Config\Services.php on line 28.
+ 1 SYSTEMPATH\Config\BaseService.php(251): Config\Services::alunos(false)
+ 2 APPPATH\Config\Services.php(25): CodeIgniter\Config\BaseService::getSharedInstance('alunos')
+ 3 SYSTEMPATH\Config\BaseService.php(321): Config\Services::alunos()
+ 4 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('alunos', [])
+ 5 SYSTEMPATH\Common.php(1027): CodeIgniter\Config\BaseService::get('alunos')
+ 6 APPPATH\Controllers\Home.php(9): service('alunos')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('E:\\usuarios\\0077064\\Documents\\DEW-II\\011\\public\\index.php')
+CRITICAL - 2026-05-19 17:18:17 --> Error: Class "Config\App\Services\AlunoService" not found
+[Method: GET, Route: /]
+in APPPATH\Config\Services.php on line 28.
+ 1 SYSTEMPATH\Config\BaseService.php(251): Config\Services::alunos(false)
+ 2 APPPATH\Config\Services.php(25): CodeIgniter\Config\BaseService::getSharedInstance('alunos')
+ 3 SYSTEMPATH\Config\BaseService.php(321): Config\Services::alunos()
+ 4 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('alunos', [])
+ 5 SYSTEMPATH\Common.php(1027): CodeIgniter\Config\BaseService::get('alunos')
+ 6 APPPATH\Controllers\Home.php(9): service('alunos')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('E:\\usuarios\\0077064\\Documents\\DEW-II\\011\\public\\index.php')
