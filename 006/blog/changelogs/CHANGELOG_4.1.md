@@ -562,4 +562,4 @@ This release focuses on code style. All changes (except those noted below) are c
 - Backfill non-optional parameters (https://github.com/codeigniter4/CodeIgniter4/pull/3938)
 - Change deprecated assertFileNotExists (https://github.com/codeigniter4/CodeIgniter4/pull/3862)
 
-See [CHANGELOG_4.0.md](./CHANGELOG_4.0.md)
+See [CHANGELOG_4.0.md](2.%20Areas/Faculdade/DEW-II/006/blog/changelogs/CHANGELOG_4.0.md)

@@ -847,4 +847,4 @@
 * refactor: [4.4] add types for phpstan by @kenjis in https://github.com/codeigniter4/CodeIgniter4/pull/7723
 * Remove trimming logic of `Autoloader::loadClass()` by @paulbalandan in https://github.com/codeigniter4/CodeIgniter4/pull/7763
 
-See [CHANGELOG_4.3.md](./changelogs/CHANGELOG_4.3.md)
+See [CHANGELOG_4.3.md](2.%20Areas/Faculdade/DEW-II/006/blog_pratica/blog/changelogs/CHANGELOG_4.3.md)

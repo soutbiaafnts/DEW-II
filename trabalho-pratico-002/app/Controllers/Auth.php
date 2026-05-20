@@ -33,8 +33,6 @@ class Auth extends BaseController
      */
     public function logout()
     {
-        // unset($_SESSION['login_test']);
-
         $session = session();
 
         if ($session->has('nome'))
@@ -45,8 +43,6 @@ class Auth extends BaseController
         $session->remove('nome');
 
         return redirect()->to('/')->with('success', "Logout realizado com sucesso, tchau $nome_user!");
-
-        // return '';
     }
 
     /**
@@ -75,7 +71,6 @@ class Auth extends BaseController
      */
     public function doLogin()
     {
-        //Implementar processo de login aqui
         $session = session();
 
         $nome = $this->request->getPost('nome');

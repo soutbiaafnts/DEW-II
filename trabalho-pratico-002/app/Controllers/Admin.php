@@ -21,6 +21,7 @@ class Admin extends BaseController
 
     public function index(): string
     {
+        $session = session();
         return view('admin/index');
     }
 }
