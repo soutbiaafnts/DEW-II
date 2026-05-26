@@ -15,10 +15,19 @@ class EstadoService
 
     public function getEstados()
     {
-        /*
-            Retorna a lista de estados.
-        */
+        try {
+            $estados = $this->estadoModel->findAll();
+        } catch (\Exception $e) {
+            return [
+                'status' => 'error',
+                'message' => 'Erro de BD:' . $e->getMessage()
+            ];
+        }
 
+        return [
+            'status' => 'success',
+            'data' => $estados
+        ];
     }
 
 }
