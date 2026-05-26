@@ -17,6 +17,21 @@ class MunicipioService
         /*
             Retorna a lista de municípios de um estado específico.
         */
+        
+        try {
+            $municipios = $this->municipioModel->select('id, nome')->where('ufid', $estadoId)->findAll();
+            
 
+        } catch (\Exception $e) {
+            return [
+                'status' => 'error',
+                'message' => 'Erro no BD:' . $e->getMessage()
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'data' => $municipios
+        ];
     }
 }
