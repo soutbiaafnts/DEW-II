@@ -11,12 +11,18 @@ class Home extends BaseController
         
         $resultado = $estadoService->getEstados();
 
-        d($resultado);
+        // d($resultado);
 
-        $resultado = $municipioService->getMunicipiosByEstado(31);
+        // $resultado = $municipioService->getMunicipiosByEstado(31);
 
-        dd($resultado);
+        // dd($resultado);
 
-        return view('index');
+        if ($resultado['status'] === 'error') {
+            return $resultado['message'];
+        }
+
+        $estados = $resultado['data'];
+
+        return view('index', ['estados' => $estados]);
     }
 }

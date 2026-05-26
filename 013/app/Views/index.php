@@ -21,9 +21,13 @@
                     <option value="">Selecione um estado</option>
 
                     <!-- Estados serão carregados do banco de dados-->
-                    <option value="1">Minas Gerais</option>
-                    <option value="2">São Paulo</option>
-                    <option value="3">Rio de Janeiro</option>
+                    <?php foreach($estados as $estado): ?>
+                    
+                        <option value="<?= $estado['id'] ?>">
+                            <?= $estado['nome'] ?>
+                        </option>
+
+                    <?php endforeach; ?>
 
                 </select>
             </div>
