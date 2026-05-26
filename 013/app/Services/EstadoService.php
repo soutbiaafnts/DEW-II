@@ -16,7 +16,7 @@ class EstadoService
     public function getEstados()
     {
         try {
-            $estados = $this->estadoModel->findAll();
+            $estados = $this->estadoModel->orderBy('nome')->findAll();
         } catch (\Exception $e) {
             return [
                 'status' => 'error',
