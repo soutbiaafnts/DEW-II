@@ -1,0 +1,97 @@
+ERROR - 2026-05-30 01:25:25 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'brasil', 3306, '', 0)
+#1 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\app\Services\EstadoService.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\app\Controllers\Home.php(12): App\Services\EstadoService->getEstados()
+#8 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#9 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\rewrite.php(44): require_once('C:\\Users\\biafo\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\app\Services\EstadoService.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\app\Controllers\Home.php(12): App\Services\EstadoService->getEstados()
+#7 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\biafo\Documents\repos-ifmg\DEW-II\013\system\rewrite.php(44): require_once('C:\\Users\\biafo\\...')
+#14 {main}
+CRITICAL - 2026-05-30 01:59:42 --> Error: Call to a member function getByEstado() on null
+[Method: GET, Route: municipios/estado/1]
+in APPPATH\Controllers\Municipios.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Municipios->getByEstado('1')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\biafo\\Documents\\repos-ifmg\\DEW-II\\013\\public\\index.php')
+CRITICAL - 2026-05-30 02:00:16 --> Error: Call to a member function getByEstado() on null
+[Method: GET, Route: municipios/estado/31]
+in APPPATH\Controllers\Municipios.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Municipios->getByEstado('31')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\biafo\\Documents\\repos-ifmg\\DEW-II\\013\\public\\index.php')
+CRITICAL - 2026-05-30 02:00:51 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "$31"
+[Method: GET, Route: municipios/estado/$31]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('municipios/estado/$31')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('municipios/estado/$31')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\biafo\\Documents\\repos-ifmg\\DEW-II\\013\\public\\index.php')
+CRITICAL - 2026-05-30 02:00:57 --> Error: Call to a member function getByEstado() on null
+[Method: GET, Route: municipios/estado/31]
+in APPPATH\Controllers\Municipios.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Municipios->getByEstado('31')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\biafo\\Documents\\repos-ifmg\\DEW-II\\013\\public\\index.php')
+CRITICAL - 2026-05-30 02:03:07 --> Error: Call to a member function getByEstado() on null
+[Method: GET, Route: municipios/estado/31]
+in APPPATH\Controllers\Municipios.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Municipios->getByEstado('31')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\biafo\\Documents\\repos-ifmg\\DEW-II\\013\\public\\index.php')
+CRITICAL - 2026-05-30 02:09:39 --> Error: Call to a member function getMunicipiosByEstado() on null
+[Method: GET, Route: municipios/estado/31]
+in APPPATH\Controllers\Municipios.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Municipios->getByEstado('31')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\biafo\\Documents\\repos-ifmg\\DEW-II\\013\\public\\index.php')
