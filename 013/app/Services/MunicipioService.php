@@ -29,6 +29,13 @@ class MunicipioService
             ];
         }
 
+        if (empty($municipios)) {
+            return [
+                'status' => 'error',
+                'message' => "Estado inválido"
+            ];
+        }
+
         return [
             'status' => 'success',
             'data' => $municipios
