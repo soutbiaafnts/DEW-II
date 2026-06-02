@@ -46,6 +46,8 @@
                 </select>
             </div>
 
+            <?= csrf_field() ?>
+
             <button type="submit">
                 Enviar
             </button>
