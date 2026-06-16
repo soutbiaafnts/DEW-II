@@ -10,11 +10,19 @@ class Home extends BaseController
     }
 
 
-    public function consultaCep()
-    {
-        //Obtendo o CEP enviado pelo formulário
+    public function consultaCep() {
+        // Obtendo o CEP enviado pelo formulário
         $cep = $this->request->getPost('cep');
 
-        d($cep); // Exibe o CEP recebido para verificação
+        // iniciando o service
+        $cepService = service('cep');
+
+        $resultado = $cepService->consultaCEP($cep);
+
+        if ($resultado['status'] == 'success') {
+            d($resultado['data']);
+        } else {
+            echo $resultado['msg'];
+        }
     }
 }
