@@ -24,6 +24,6 @@ class Services extends BaseService
             return static::getSharedInstance('cep');
         }
 
-        return new \Services\CEPService();
+        return new \App\Services\CEPService();
     }
 }
