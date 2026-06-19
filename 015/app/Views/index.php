@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
     <div class="container py-5">
@@ -23,14 +25,8 @@
                         <form id="cepForm" action="/consulta-cep" method="POST">
                             <div class="mb-3">
                                 <label for="cep" class="form-label">CEP</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="cep"
-                                    name="cep"
-                                    placeholder="Digite o CEP"
-                                    maxlength="9"
-                                    required>
+                                <input type="text" class="form-control" id="cep" name="cep" placeholder="Digite o CEP"
+                                    maxlength="9" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary w-100">
@@ -45,6 +41,34 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <?php
+
+    if (session()->has('cepData')) {
+        $cepData = session()->getFlashdata('cepData');
+
+        echo '<div class="container mt-3">';
+            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+                echo "<b>Dados do CEP encontrados com sucesso!</b><br>";        
+                echo 'Cidade: ' . $cepData['city'] . '<br>';        
+                echo 'UF: ' . $cepData['state'] . '<br>';
+                echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>';
+            echo '</div>';
+        echo '</div>';
+    }
+
+    if (session()->has('error')) {
+        $msg = session()->getFlashdata('error');
+
+        echo '<div class="container mt-3">';
+        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+        echo "<b>Erro ao buscar CEP!</b><br>";
+        echo $msg;
+        echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> </button>';
+        echo '</div>';
+        echo '</div>';
+    }
+    ?>
 
     <!-- <script>
         document.getElementById('cepForm').addEventListener('submit', function(e) {
@@ -80,9 +104,6 @@
 
 </body>
 
-
-
-
 <div class="modal fade" id="cepModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-danger">
@@ -92,10 +113,7 @@
                     Atenção
                 </h5>
 
-                <button type="button"
-                        class="btn-close btn-close-white"
-                        data-bs-dismiss="modal"
-                        aria-label="Fechar">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar">
                 </button>
             </div>
 
@@ -104,9 +122,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button"
-                        class="btn btn-danger"
-                        data-bs-dismiss="modal">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
                     Fechar
                 </button>
             </div>
